@@ -222,7 +222,7 @@ Install_RPM_Pack(){
 	#yumBaseUrl=$(cat /etc/yum.repos.d/CentOS-Base.repo|grep baseurl=http|cut -d '=' -f 2|cut -d '$' -f 1|head -n 1)
 	#[ "${yumBaseUrl}" ] && checkYumRepo=$(curl --connect-timeout 5 --head -s -o /dev/null -w %{http_code} ${yumBaseUrl})	
 	#if [ "${checkYumRepo}" != "200" ] && [ "${SYS_TYPE}" ];then
-	#	curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/yumRepo_select.sh|bash
+	#	curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0-install/main/install/yumRepo_select.sh|bash
 	#fi
 	
 	#尝试同步时间(从bt.cn)
@@ -499,9 +499,9 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt6.init -T 10
-	wget -O /www/server/panel/install/public.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/public.sh -T 10
-	wget -O panel.zip https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/panel6.zip -T 10
+	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt6.init -T 10
+	wget -O /www/server/panel/install/public.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/public.sh -T 10
+	wget -O panel.zip https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/panel6.zip -T 10
 
 	if [ -f "${setup_path}/server/panel/data/default.db" ];then
 		if [ -d "/${setup_path}/server/panel/old_data" ];then
@@ -551,8 +551,8 @@ Install_Bt(){
 	chmod -R +x ${setup_path}/server/panel/script
 	ln -sf /etc/init.d/bt /usr/bin/bt
 	echo "${panelPort}" > ${setup_path}/server/panel/data/port.pl
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt7.init -T 10
-	wget -O /www/server/panel/init.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt7.init -T 10
+	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt7.init -T 10
+	wget -O /www/server/panel/init.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt7.init -T 10
 	wget -O /www/server/panel/data/softList.conf ${download_Url}/install/conf/softList.conf
 }
 Set_Bt_Panel(){
@@ -976,7 +976,7 @@ Install_RPM_Pack(){
 	#yumBaseUrl=$(cat /etc/yum.repos.d/CentOS-Base.repo|grep baseurl=http|cut -d '=' -f 2|cut -d '$' -f 1|head -n 1)
 	#[ "${yumBaseUrl}" ] && checkYumRepo=$(curl --connect-timeout 5 --head -s -o /dev/null -w %{http_code} ${yumBaseUrl})	
 	#if [ "${checkYumRepo}" != "200" ] && [ "${SYS_TYPE}" ];then
-	#	curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/yumRepo_select.sh|bash
+	#	curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/yumRepo_select.sh|bash
 	#fi
 	
 	#尝试同步时间(从bt.cn)
@@ -1253,9 +1253,9 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt6.init -T 10
-	wget -O /www/server/panel/install/public.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/public.sh -T 10
-	wget -O panel.zip https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/panel6.zip -T 10
+	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt6.init -T 10
+	wget -O /www/server/panel/install/public.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/public.sh -T 10
+	wget -O panel.zip https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/panel6.zip -T 10
 
 	if [ -f "${setup_path}/server/panel/data/default.db" ];then
 		if [ -d "/${setup_path}/server/panel/old_data" ];then
@@ -1305,8 +1305,8 @@ Install_Bt(){
 	chmod -R +x ${setup_path}/server/panel/script
 	ln -sf /etc/init.d/bt /usr/bin/bt
 	echo "${panelPort}" > ${setup_path}/server/panel/data/port.pl
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt7.init -T 10
-	wget -O /www/server/panel/init.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0/main/install/src/bt7.init -T 10
+	wget -O /etc/init.d/bt https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt7.init -T 10
+	wget -O /www/server/panel/init.sh https://raw.githubusercontent.com/xiaofengzhiyu/btpanel-v7.7.0-install/main/install/src/bt7.init -T 10
 	wget -O /www/server/panel/data/softList.conf ${download_Url}/install/conf/softList.conf
 }
 Set_Bt_Panel(){
